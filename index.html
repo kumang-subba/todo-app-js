@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Todo Project 1</title>
+  </head>
+  <body>
+    <h1>Todo Application</h1>
+    <button class="button" id="addTodo">Add Todo</button>
+    <section>
+      <h2>My Todos</h2>
+      <div id="todoList"></div>
+      <div class="action-bar">
+        <span id="itemCount"></span>
+        <div class="tabs">
+          <button id="allTab" class="tab-btn">All</button>
+          <button id="activeTab" class="tab-btn">Active</button>
+          <button id="completedTab" class="tab-btn">Completed</button>
+          <div class="tab-indicator"></div>
+        </div>
+        <button class="clear-btn">Clear completed</button>
+      </div>
+    </section>
+    <dialog id="modal">
+      <button id="modal-close">&times;</button>
+      <form class="form" id="add-todo-form">
+        <legend>Add a Todo</legend>
+        <p>
+          <input type="text" id="todo" placeholder="" name="todo" />
+          <label for="todo">Name of Todo</label>
+          <span>* Please enter a Todo name</span>
+        </p>
+        <div>
+          <button type="submit" class="btn confirm-btn">Add Todo Item</button>
+          <button type="button" class="btn danger-btn" id="modal-cancel">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
