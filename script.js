@@ -64,6 +64,7 @@ function renderTodoList(todos) {
   todoList.innerHTML = "";
 
   todos.forEach((todo) => {
+    // Creating a div element for each todo item
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-item");
     const checkboxDiv = document.createElement("div");
@@ -100,6 +101,7 @@ function renderTodoList(todos) {
     todoItem.appendChild(editButton);
     todoItem.draggable = true;
 
+    // Adding event listener to each edit button
     editButton.addEventListener("click", () => handleEdit(todoItem));
 
     todoList.appendChild(todoItem);
@@ -176,6 +178,7 @@ function saveEdit(textDiv, newValue, oldValue, inputElement) {
   if (errorLabelExists) {
     errorLabelExists.remove();
   }
+  // Validation for edited input
   if (newValue === "") {
     const errorLabel = document.createElement("label");
     errorLabel.id = "errorEditLabel";
@@ -272,6 +275,7 @@ modalCancelButton.addEventListener("click", () => {
 addTodoForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const todo = addTodoForm["todo"].value;
+  // Validation for input
   if (todo === "") {
     addTodoForm["todo"].style["border-color"] = "red";
     addTodoForm.getElementsByTagName("label")[0].style["color"] = "#ed5858";
