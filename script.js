@@ -256,6 +256,7 @@ modalCloseButton.addEventListener("click", () => {
 // Open modal on add todo button click
 addTodoButton.addEventListener("click", () => {
   modal.showModal();
+  setTimeout(() => addTodoForm.todo.focus(), 20);
 });
 
 // Close modal on outside click
